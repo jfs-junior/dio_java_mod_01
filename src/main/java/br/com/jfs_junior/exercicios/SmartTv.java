@@ -6,8 +6,8 @@ public class SmartTv {
     private int channel = 1;
     private int volume = 20;
 
-    public String isPowerOne() {
-        return powerOn ? "Ligada" : "Desligada";
+    public boolean isPowerOne() {
+        return this.powerOn;
     }
 
     /**
@@ -24,7 +24,6 @@ public class SmartTv {
 
     /**
      * Set current SmartTv Channel
-     * @param value
      */
     public void setChannel(int value) {
         if(powerOn) {
@@ -40,7 +39,6 @@ public class SmartTv {
 
     /**
      * Get current SmartTv Channel
-     * @return int Channel
      */
     public void getChannel() {
         if(powerOn) {
