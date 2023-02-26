@@ -1,4 +1,7 @@
 package br.com.jfs_junior.exercicios;
+
+import java.io.StringReader;
+
 public class EstruturaDeDadosPilha {
 
     private EstruturaDeDadosNos refNoEntradaPilha;
@@ -30,4 +33,22 @@ public class EstruturaDeDadosPilha {
         return refNoEntradaPilha == null;
     }
 
+    public String toString() {
+        String stringRetorno = "-----------------\n";
+        stringRetorno += "      PILHA     \n";
+        stringRetorno += "-----------------\n";
+
+        EstruturaDeDadosNos noAuxiliar = refNoEntradaPilha;
+
+        while(true) {
+            if(noAuxiliar != null) {
+                stringRetorno += "[No{dados=" + noAuxiliar.getConteudo()+"}]\n";
+                noAuxiliar = noAuxiliar.getProximoNo();
+            } else {
+                break;
+            }
+        }
+        stringRetorno += "=================";
+        return stringRetorno;
+    }
 }
